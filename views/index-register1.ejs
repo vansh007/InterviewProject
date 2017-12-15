@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Digilock Login System</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="controller/login-controller.js"></script>
+        <!-- Stylesheets
+            ================================================= -->
+        <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <body ng-app="login" ng-controller="loginController">
+        <div class="login-screen"></div>
+        <div class="login-center">
+            <div class="container min-height" style="margin-top: 20px;">
+                <div class="row">
+                    <div class="col-xs-4 col-md-offset-8">
+                        <div class="login" id="card">
+                            <div class="front signin_form">
+                                <p>Login To Your Account</p>
+                                <form class="login-form">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input id="my-email" ng-model="login_email" class="form-control input-group-lg" type="text" name="Email" placeholder="Type your email">
+                                            <span class="input-group-addon">
+                                            <i style="color: white;" class="glyphicon glyphicon-user"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input id="my-password" ng-model="login_password" class="form-control input-group-lg" type="password" name="password" placeholder="Type your password">
+                                            <span class="input-group-addon">
+                                            <i style="color: white;" class="glyphicon glyphicon-lock"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group sign-btn">
+                                        <input type="submit" class="btn" ng-click="login()" value="Log in">
+                                        <p style="color:red; size: 30px;" ng-show="login_invalid" >{{login_invalid_value}}</p>
+                                        <hr>
+                                        <p><strong>New to Digilock?</strong><br><a href="#" id="flip-btn" class="signup signup_link" style="font-weight: bold; font-size: 15px;">Sign up for a new account</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="back signup_form" style="opacity: 0;">
+                                <p>Sign Up for Your New Account</p>
+                                <form class="login-form">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input id="Firstname" ng-model="first_name" type="text" class="form-control input-group-lg" type="text" name="Firstname" placeholder="First Name">
+                                            <span class="input-group-addon">
+                                            <i style="color: white;" class="glyphicon glyphicon-user"></i>
+                                            </span>
+                                        </div>
+                                        <p style="color:red" ng-show="first_name_invalid">First Name cannot be Empty</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <!-- <input type="text" class="form-control" placeholder="Last Name"> -->
+                                            <input id="Lastname" ng-model="last_name" class="form-control input-group-lg" type="text" name="Lastname" title="Enter last name" placeholder="Last name"/>
+                                            <span class="input-group-addon">
+                                            <i style="color: white;" class="glyphicon glyphicon-user"></i>
+                                            </span>
+                                        </div>
+                                        <p style="color:red" ng-show="last_name_invalid">Last Name cannot be Empty</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input id="Email" ng-model="email" class="form-control input-group-lg" type="text" name="Email" title="Enter Email" placeholder="Your Email"/>
+                                            <span class="input-group-addon">
+                                            <i style="color: white;" class="glyphicon glyphicon-envelope"></i>
+                                            </span>
+                                        </div>
+                                        <p style="color:red" ng-show="email_invalid">Email is not valid</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <!-- <input type="password" class="form-control" placeholder="Password"> -->
+                                            <input id="Password" ng-model="reg_password" class="form-control input-group-lg" type="password" name="Password" title="Enter password" placeholder="Password"/>
+                                            <span style="color: white;" class="input-group-addon">
+                                            <i style="color: white;" class="glyphicon glyphicon-lock"></i>
+                                            </span>
+                                        </div>
+                                        <p style="color:red" ng-show="password_invalid">Error: Minimum eight characters, at least one letter and one number:</p>
+                                    </div>
+                                    <div class="form-group sign-btn">
+                                        <input type="submit" class="btn" ng-click="register()" value="Sign up">
+                                        <p style="color:red" ng-show="error_save">Cannot Register. Try again!!!</p>
+                                        <p style="color:lightgreen; font-weight: bold; font-size: : 16px;" ng-show="register_success">Successfully Registered! Now verify your email id..</p>
+                                        <hr>
+                                        <p>You have already Account? Then Log in <a href="#" id="unflip-btn" class="signup" style="font-weight: bold; font-size: 15px;">Here</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Flip/1.0.18/jquery.flip.js"></script>
+        <script>
+            $().ready(function() {
+              $("#card").flip({
+                trigger: 'manual'
+              });
+            });
+            
+            
+            $(".signup_link").click(function() {
+            
+              $(".signin_form").css('opacity', '0');
+              $(".signup_form").css('opacity', '100');
+              
+              
+              $("#card").flip(true);
+              
+              return false;
+            });
+            
+            $("#unflip-btn").click(function(){
+              
+              $(".signin_form").css('opacity', '100');
+              $(".signup_form").css('opacity', '0');
+              
+                $("#card").flip(false);
+              
+              return false;
+              
+            });
+                
+        </script>
+    </body>
