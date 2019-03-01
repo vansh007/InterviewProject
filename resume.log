@@ -1,0 +1,237 @@
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.21in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{Vansh Shah}{August 02, 1994}{Last updated on \today }
+
+\nobreakvspace{0.4em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:shahvansh123.at.gmail.dot.com}{shahvansh123\mbox{}@\mbox{}gmail.com}\sbull
+\textsmaller{+}1 (408)643-9381\sbull
+{\newnums \href{https://github.com/vansh007}{vansh007 (Github)}\sbull
+{\mewmums \href{https://www.linkedin.com/in/vansh-shah/}{www.linkedin.com/in/vansh-shah}}
+\\
+{
+San Jose\sbull
+California\sbull
+United States
+}
+\spacedhrule{0.0em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+
+
+\roottitle{Experience}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\href{https://www.activision.com/content/atvi/activision/web/en/home.html/}{Activision Blizzard}}
+  {\textsc{Santa Monica, CA}} {%
+  \headedsubsection
+    {Full-stack Intern}
+    {May \apo17 -- Aug \apo17}
+    {\bodytext{
+    \begin{itemize}
+        \item Worked with \textbf{Central Tech} team on developing some additional features to the platform which is used to deploy game builds and patches for the entire \textbf{Call Of Duty} Series.
+        \item Merged two different applications where one was dealing with all the game build deployment and the other one was to monitor all the services, so that we have a single page application for everything.
+        \item Extensively built API's for a beautiful global map to see all the data-centers and quickly identify an error in any particular data-center and used High-charts to show all the data-center statistics on individual clicks.
+        \item Got featured in the credits of Call of Duty-World War II for developing services for games Social Hub.
+    \textbf{ \item \small{Python | jQuery | AJAX | Perforce | CherryPy | Node.js | Ruby | Highcharts | Datatables | Bootstrap | Cygwin}}
+    \end{itemize}}}
+}
+
+
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.sjsu.edu/}{San Jose State University}}
+  {\textsc{San Jose, CA}} {%
+  \headedsubsection
+    {Teaching Assistant - Programming Paradigms}
+    {May \apo16 -- Dec \apo17}
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Taught Programming Paradigm concepts like Procedural, Object-Oriented Programming, Functional Programming and Logic Programming to Undergraduate Computer Science class of 35-40 students.
+       
+    \end{itemize}}}
+}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\href{https://www.linkedin.com/company-beta/2976633/?pathWildcard=2976633}{DigimationUK}}
+  {\textsc{Gujarat, India}} {%
+  \headedsubsection
+    {Android Developer Intern}
+    {June \apo14 -- May \apo15}
+    {\bodytext{
+    \begin{itemize}
+        \item Involved with all phases of app development from initial concepts, design, development, testing and deployment. 
+        \item Participated in brainstorming and user feedback sessions to gather input to apply changes for prototype iterations. 
+        \item Created SQL database structures that integrates with Android applications and web interfaces.
+        \textbf{ \item  \small{Android | Java | SQL | PHP  | XML | SDK | WAMP | Eclipse | UI-Automator }}
+    \end{itemize}}}
+}
+
+
+
+
+\spacedhrule{0.0em}{-0.4em}
+
+
+
+\roottitle{Education}
+
+\headedsection
+  {\href{http://www.sjsu.edu/}{San Jose State University} }
+  {\textsc{California, United States}} {%
+  \headedsubsection
+    {Masters degree in Software Engineering}
+    {Graduated - December \apo17}
+    
+}
+
+
+\headedsection
+  {\href{http://www.gtu.ac.in/}{Gujarat Technological University} }
+  {\textsc{Gujarat, India}} {%
+  \headedsubsection
+    {Bachelors degree in Information Technology}
+    {Graduated - June \apo15}
+    
+}
+
+\spacedhrule{0.0em}{-0.4em}
+
+\roottitle{Skills}
+{\bodytext{
+  \begin{tabular}{ll}
+    %\midrule
+    \tabitem \textbf{Programming Languages} & Python, Java, C, C\#, Ruby \\[.1\normalbaselineskip]
+    \tabitem \textbf{Web Technologies} & Javascript, NodeJS-Express, JAX-WS, AJAX, Spring, Rest Web-Services \\[.1\normalbaselineskip]
+    \tabitem \textbf{Front-end Technologies} & Html 5, CSS, AngularJs, Bootstrap, XML \\[.1\normalbaselineskip]
+    \tabitem \textbf{Databases/Middleware} & MySQL, MongoDB, IBM-Db2, AWS RDS, Oracle, RabbitMQ, Redis \\[.1\normalbaselineskip]
+    \tabitem \textbf{Testing Tools and Frameworks} \hspace{.3cm}  &  JMeter, JUnit, Mocha.js, Selenium, Nagios \\[.1\normalbaselineskip]
+    
+    \tabitem \textbf{Cloud Technologies} & AWS, Heroku, Google App Engine, Google Compute Engine, IBM Bluemix \\[.1\normalbaselineskip]
+     \tabitem \textbf{SCM and Versioning Tools} & Git, Perforce, Gradle, Maven, Eclipse,  \\[.1\normalbaselineskip]
+      \tabitem \textbf{Other} & Android, Adobe premiere pro CC, Photoshop-CS6, SourceTree, Cygwin, Putty \\[.1\normalbaselineskip]
+    
+   
+    
+   
+  \end{tabular}
+}}
+
+
+\spacedhrule{0.0em}{-0.4em}
+
+\roottitle{Academic Projects}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://github.com/shahaashay21/Amazon}{Amazon Fresh Simulation}
+  \textbf{
+  \small{(Node.JS | AngularJS | MongoDB | MySQL | RabbitMQ | Redis | JQuery)}}}
+   {%
+  
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Designed and developed Amazon Fresh prototype using 3 tier architecture.
+        \item Customised MongoDB sharding and distributed database design with MySQL.
+        \item Performed asynchronous automated testing using mocha.js framework and load testing of 100,200,500 concurrent users with 1000-2000 requests/user using JMeter.
+        \item Improved performance by using combination of connection pooling, caching mechanism Redis, and advanced message queuing RabbitMQ. Implemented Dynamic pricing algorithm for seasonal rate.
+    \end{itemize}}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://github.com/vansh007/TEAM-MINER}{Good Buy or Bad Buy}
+  \textbf{
+  \small{(Python | K-means | SVM | Data Preprocessing)}}}
+  {%
+  
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Applied data mining techniques like K-Means and Supervised Learning (Support vector machines) on the cars data-set to determine whether the car bought in the auction was a good buy or not.
+        \item Performed preprocessing on the data-set and obtained 85-90 \% accuracy in the result which was plotted on the graph.
+        
+    \end{itemize}}}
+}
+
+
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://github.com/pendawleabhay/LibraryManagementSystem}{Library Management System}
+  \textbf{
+  \small{(Spring MVC | Java | Google Books API | Aws | MySQL - RDS)}}}
+   {%
+  
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Built a 3-tier web application which manages library system, including cataloguing, search, circulation, waiting list.
+        
+        \item Developed an app for two users - Librarian and Patron with the integration of Google Books API.
+        
+        
+    \end{itemize}}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://github.com/vansh007/UML-Parser}{UML Parser}
+  \textbf{
+  \small{(Java | javaparser | plantuml)}}}
+  {%
+  
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Implemented a Java app, which takes an input as Java classes and converts them into the UML Class Diagram.
+        \item Built a functionality which exports diagrams to an image file. Agile methodologies and Kanban Board were used.
+        
+    \end{itemize}}}
+}
+
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://github.com/vansh007/GameOfLife}{Game Of Life (2 different Versions)}
+  \textbf{
+  \small{(Android | 2D Graphics | Java | Ios | Swift )}}}
+  {%
+  
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Developed the classic Conway's Game Of Life for both android as well as Ios using the same business logic.
+        
+        
+    \end{itemize}}}
+}
+
+\spacedhrule{0.0em}{-0.4em}
+
+
+
+
+
+\end{document}
+\documentclass[oneside]{book}
